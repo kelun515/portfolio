@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swimming - YUSUKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+    <style>
+        .video-container {
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+            border-radius: 10px;
+            transform: translateX(-16em);
+            margin-top: 40px;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        #muteButton {
+            position: absolute;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            transform: translateX(270px) translateY(-30px);
+        }
+        #muteButton:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform:  translateX(270px) translateY(-30px);
+        }
+        #muteButton:active {
+            transform: translateX(270px) translateY(-30px);
+        }
+        #muteButton i {
+            font-size: 17px;
+            color: #333;
+            transition: all 0.3s ease;
+            transform: translateX(-4px);
+        }
+        #muteButton:hover i {
+            color: #000;
+        }
+        #muteButton .fa-volume-up {
+            display: none;
+        }
+        #muteButton.muted .fa-volume-up {
+            display: inline-block;
+        }
+        #muteButton.muted .fa-volume-mute {
+            display: none;
+        }
+        .package {
+            width: 500px;
+            height: 254px;
+            background-image: linear-gradient(163deg, #81a8a8 0%, #456e6e 100%);
+            border-radius: 20px;
+            text-align: center;
+            transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+            transform: translateX(28em) translateY(-290px);
+        }
+        .package:hover {
+            box-shadow: 0px 0px 30px 1px rgba(255, 253, 253, 0.3);
+        }
+        .package2 {
+            width: 500px;
+            height: 254px;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+            padding: 15px;
+            cursor: pointer;
+        }
+        .package2:hover {
+            transform: scale(0.98);
+            border-radius: 18px;
+        }
+        .text {
+            color: white;
+            margin-top: 28px;
+            font-size: 10px;
+            max-width: 300px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            transform: translateX(-8em) translateY(-10em);
+        }
+        .image-container img {
+            width: 60%;
+            max-width: 250px;
+            border-radius: 10px;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/logo1round2.png" alt="YUSUKE Logo">
+        </a>
+        <header>
+            <a href="index.html" class="logo2">
+                <img src="./static/wordlogo.png" alt="YUSUKE Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">General</a>
+                <a href="taekwondo.html">Taekwondo</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="music.html">Music</a>
+                <a href="ski.html">Ski</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="dancing.html">Dancing</a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="loader">
+        <p>Discover Swimming</p>
+        <div class="words">
+            <span class="word">Fitness</span>
+            <span class="word">Relaxation</span>
+            <span class="word">Technique</span>
+            <span class="word">Endurance</span>
+            <span class="word">Refreshing</span>
+        </div>
+    </div>
+
+    <div class="cubic">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="transform: translateX(10em); font-family: 'fonts';">Swimming: the art of moving through water</h1>
+        <ul class="about-details">
+            <div class="video-container">
+                <div>
+                    <video id="myVideo" autoplay loop muted playsinline>
+                        <source src="./static/swimm.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button id="muteButton">
+                        <i class="fas fa-volume-mute"></i>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>    
+            </div>
+            <div class="package">
+                <div class="package2">
+                    <p class="text">
+                        <h2>The art of swimming</h2>
+                        <a href="glossary.html" style="font-size: 18px;" class="glossary-word">Swimming</a> is a fantastic full-body workout that combines cardiovascular exercise with strength training. It's low-impact, making it suitable for people of all ages and fitness levels. The feeling of weightlessness in the water can be incredibly relaxing, while the challenge of improving your technique and speed keeps it engaging. Whether you're doing laps for fitness or enjoying a leisurely swim, it's a great way to stay active and cool off.
+                    </p>
+                </div>
+            </div>
+            <div class="image-container">
+                <img style="transform: translateX(25em) translateY(-6em);" src="./static/swimm.jpeg" alt="Swimming">
+            </div>
+            <div style="transform: translateX(6em) translateY(-34em); width: 500px; height: 250px;" class="package">
+                <div style="width: 500px; height: 250px;" class="package2">
+                    <p class="text">
+                        <h2>Story line</h2>
+                        I vividly remember starting my swimming journey at the age of 12. Since then, I have had the incredible opportunity to swim in various beautiful locations, including the serene waters of the Vietnamese sea, the stunning Russian <a href="glossary.html" style="font-size: 18px;" class="glossary-word">Black sea</a>, and the refreshing pools in Korea. Each experience has brought me a sense of relaxation and tranquility, allowing me to focus on my breathing and feel completely at one with the water, as if nothing else exists but me and the gentle waves surrounding me.
+                    </p>
+                </div>
+            </div>
+        </ul>
+        
+        <div style="margin-top: -29em;" class="button-container">
+            <a href="ski.html" class="arrow">
+                <button aria-label="Back">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <p>back</p>
+                </button>
+            </a>
+            <a href="dancing.html" class="arrow">
+                <button style="transform: translateX(49em) translateY(-10px);" aria-label="Next">
+                    <p>next</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="triangles">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball - YUSUKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+    <style>
+        /* Additional styles for volleyball page */
+        .video-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 20px auto;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+            border-radius: 10px ;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            transform: translateX(-8em) translateY(-10em);
+        }
+        .image-container img {
+            width: 45%;
+            max-width: 220px;
+            border-radius: 10px;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+            border-radius: 10px ;
+        }
+       
+.card3-title {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  
+}
+
+.small-desc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #080808;
+}
+
+.small-desc {
+  font-size: 1em;
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #313131, #dbdbdb);
+  border-radius: 0 4px 0 32px;
+  
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card3 {
+  display: block;
+  position: relative;
+  max-width: 420px;
+  max-height: 420px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #bbbbbb, #525252);
+  font-family: Arial, Helvetica, sans-serif;
+  
+  transform: translateX(300px) translateY(-21em);
+  
+}
+
+
+
+
+.card3:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  
+  background: linear-gradient(135deg, #333333, #000000);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.35s ease-out;
+  
+  transform: translateX(297px) translateY(-20em);
+  
+  
+}
+
+.card3:hover:before {
+  transform: scale(28);
+  
+  
+}
+
+.card3:hover .small-desc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+  
+}
+
+.card3:hover .card3-title {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
+  
+}
+.button-container{
+            margin-top: -23em;
+        }
+      
+                .video-container {
+                    width: 100%;
+                    max-width: 470px;
+                    margin: 20px auto;
+                    
+                    
+                    border-color: ghostwhite;
+                    box-shadow: 0 0 0 5px #ffffff80;
+                    border-radius: 10px ;
+                }
+                .video-container video {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                
+                #muteButton {
+    position: absolute;
+    
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    transform: translateX(435px) translateY(-35px);
+    z-index: 2;
+}
+
+#muteButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+    transform: translateX(435px) translateY(-35px);
+}
+
+#muteButton:active {
+    transform: scale(0.95);
+    transform: translateX(435px) translateY(-35px);
+}
+
+/* Mute/Unmute Icon Styles */
+#muteButton i {
+    font-size: 17px;
+    color: #333;
+    transition: all 0.3s ease;
+    transform: translateX(-4px);
+}
+
+#muteButton:hover i {
+    color: #000;
+    
+}
+
+/* Hide unmute icon by default */
+#muteButton .fa-volume-up {
+    display: none;
+}
+
+/* Show unmute icon when audio is muted */
+#muteButton.muted .fa-volume-up {
+    display: inline-block;
+}
+
+#muteButton.muted .fa-volume-mute {
+    display: none;
+}
+                
+          
+
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/logo1round2.png" alt="YUSUKE Logo">
+        </a>
+        <header>
+            <a href="index.html" class="logo2">
+                <img src="./static/wordlogo.png" alt="YUSUKE Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">General</a>
+                <a href="taekwondo.html">Taekwondo</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="music.html">Music</a>
+                <a href="ski.html">Ski</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="dancing.html">Dancing</a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="loader">
+        <p>Discover Volleyball</p>
+        <div class="words">
+            <span class="word">Spike</span>
+            <span class="word">Serve</span>
+            <span class="word">Block</span>
+            <span class="word">Dig</span>
+            <span class="word">Set</span>
+        </div>
+    </div>
+
+    <div class="cubic">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="transform: translateX(15em); font-family: 'fonts';">Volleyball: The Sky-High Sport</h1>
+        
+        <div class="video-container">
+          <video id="myVideo" autoplay loop muted playsinline>
+              <source src="./static/voll.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+          </video>
+          <button id="muteButton">
+            <i class="fas fa-volume-mute"></i>
+            <i class="fas fa-volume-up"></i>
+        </button>
+        </div>
+        
+
+        <div class="image-container">
+            <img src="./static/voll2.JPG" alt="Volleyball Action Shot 1">
+            <img style=" transform: translateX(16em);"src="./static/voll.JPG" alt="Volleyball Action Shot 2">
+        </div>
+        
+        
+
+        
+
+        <div class="card3">
+            <p class="card3-title">Volleyball</p>
+            <p class="small-desc">
+                I have been playing <a href="glossary.html" style="font-size: 18px;" class="glossary-word">volleyball</a> since I was in 9th grade,
+                 and I genuinely believe that volleyball is one of the best 
+                 team sports ever. It requires not only physical skill but 
+                 also a deep understanding and connection among teammates. 
+                 This sport fosters communication and trust, 
+                 which are essential for success on the court. 
+                 I am proud to share that I placed 2nd in my high school 
+                 volleyball tournament, an achievement that reflects 
+                 our hard work, dedication, and the strong bonds 
+                 we built as a team.
+            </p>
+            <div class="go-corner">
+              <div class="go-arrow">→</div>
+            </div>
+          </div>
+
+        <div class="button-container">
+            <a href="taekwondo.html" class="arrow">
+            <button aria-label="Back">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M10 19l-7-7m0 0l7-7m-7 7h18"
+                ></path>
+              </svg>
+              <p>back</p>
+            </button>
+            </a>
+            <a href="music.html" class="arrow">
+            <button style="transform: translateX(49em) translateY(-10px);" aria-label="Next">
+              <p>next</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="4">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                ></path>
+              </svg>
+            </button>
+            </a>
+          </div>
+    </div>
+
+    <div class="triangles">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+

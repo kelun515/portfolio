@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ski - YUSUKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/logo1round2.png" alt="YUSUKE Logo">
+        </a>
+        <header>
+            <a href="index.html" class="logo2">
+                <img src="./static/wordlogo.png" alt="YUSUKE Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">General</a>
+                <a href="taekwondo.html">Taekwondo</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="music.html">Music</a>
+                <a href="ski.html">Ski</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="dancing.html">Dancing</a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="loader">
+        <p>Discover Skiing</p>
+        <div class="words">
+            <span class="word">Speed</span>
+            <span class="word">Freedom</span>
+            <span class="word">Adventure</span>
+            <span class="word">Nature</span>
+            <span class="word">Thrill</span>
+        </div>
+    </div>
+
+    <div class="cubic">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="transform: translateX(15em); font-family: 'fonts';">Skiing: the art of gliding on snow</h1>
+        <ul class="about-details">
+            <div class="video-container">
+                <style>
+                .video-container {
+                    width: 100%;
+                    max-width: 420px;
+                    margin: 20px auto;
+                    
+                    
+                    border-color: ghostwhite;
+                    box-shadow: 0 0 0 5px #ffffff80;
+                    border-radius: 10px ;
+                    
+                    transform: translateX(-16em);
+                    margin-top: 40px;
+                }
+                .video-container video {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+                
+                #muteButton {
+    position: absolute;
+    
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    transform: translateX(19em) translateY(-2em);
+}
+
+#muteButton:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
+    transform: translateX(19em) translateY(-2em);
+}
+
+#muteButton:active {
+    transform: scale(0.95);
+    transform: translateX(19em) translateY(-2em);
+}
+
+/* Mute/Unmute Icon Styles */
+#muteButton i {
+    font-size: 17px;
+    color: #333;
+    transition: all 0.3s ease;
+    transform: translateX(-4px);
+}
+
+#muteButton:hover i {
+    color: #000;
+    
+}
+
+/* Hide unmute icon by default */
+#muteButton .fa-volume-up {
+    display: none;
+}
+
+/* Show unmute icon when audio is muted */
+#muteButton.muted .fa-volume-up {
+    display: inline-block;
+}
+
+#muteButton.muted .fa-volume-mute {
+    display: none;
+}
+
+.package {
+  width: 500px;
+  height: 254px;
+  background-image: linear-gradient(163deg, #89a881 0%, #456e5a 100%);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+  
+  transform: translateX(31em) translateY(-270px);
+}
+
+.package:hover {
+  box-shadow: 0px 0px 30px 1px rgba(255, 253, 253, 0.3);
+}
+
+.package2 {
+  width: 500px;
+  height: 254px;
+  background-color: #292929;
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0, 0, 0, 1);
+  padding: 15px;
+  cursor: pointer;
+}
+
+.package2:hover {
+  transform: scale(0.98);
+  border-radius: 18px;
+}
+
+.text {
+  color: white;
+  margin-top: 28px;
+  font-size: 10px;
+  max-width:300px ;
+}
+.image-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            transform: translateX(-8em) translateY(-10em);
+        }
+        .image-container img {
+            width: 45%;
+            max-width: 220px;
+            border-radius: 10px;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+            border-radius: 10px ;
+        }
+                
+            </style>
+    
+            <div>
+                <video id="myVideo" autoplay loop muted playsinline>
+                    <source src="./static/skivid.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="muteButton">
+                    <i class="fas fa-volume-mute"></i>
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>    
+            </ul>
+            <div class="package">
+                <div class="package2"><p class="text"><h2>The art of ski</h2>Skiing is undoubtedly one of the coolest and most liberating sports I have ever experienced. The thrill of gliding down snow-covered slopes, surrounded by breathtaking mountain vistas, is simply exhilarating. The vibe of the ski resort, combined with the beauty of nature, creates a magical atmosphere. The art of skiing, with its graceful movements and techniques, adds to the joy, making every run an unforgettable adventure.</p></div>
+              </div>
+                
+            <div class="image-container">
+                <img style="transform: translateX(30em) translateY(-6em);" src="./static/skiw.jpg" alt="ski">
+            </div>
+            <div style=" transform: translateX(5em) translateY(-40em); width: 600px; height: 300px;" class="package">
+                <div  style="width: 600px; height: 300px;" class="package2"><p class="text"><h2>Story line</h2>I still vividly remember the first time I went skiing when I was just 10 years old. My dad excitedly announced that we were going to <a href="glossary.html" style="font-size: 16px;" class="glossary-word">Ski and Snowboard</a>, but I had no idea what to expect. The first few minutes were challenging as I struggled to find my balance, but after about ten minutes, I began to grasp the basics and felt the thrill of gliding down the slopes. Now, at 18, skiing has become my favorite winter sport, and I am truly grateful to my dad for introducing me to this incredible experience. It has brought me joy, adventure, and a deep appreciation for the beauty of winter landscapes.</p></div>
+              </div>
+
+            
+        </ul>
+        
+        <div style="margin-top: -34em;" class="button-container">
+            <a href="music.html" class="arrow">
+                <button aria-label="Back">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                    </svg>
+                    <p>back</p>
+                </button>
+            </a>
+            <a href="swimming.html" class="arrow">
+                <button style="transform: translateX(49em) translateY(-10px);" aria-label="Next">
+                    <p>next</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="4">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="triangles">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
