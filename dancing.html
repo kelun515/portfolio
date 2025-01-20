@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dancing - YUSUKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        .about-title {
+            font-size: 22px;
+            margin-bottom: 20px;
+            margin-top: -10px;
+        }
+        .about-details {
+            list-style: none;
+            border-radius: 2em;
+        }
+        /* From Uiverse.io by eslam-hany */ 
+.book {
+  position: relative;
+  border-radius: 10px;
+  width: 420px;
+  height: 250px;
+  background-color: rgb(109, 128, 117);
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+  transform: translateX(35em) translateY(-17em);
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: rgb(109, 128, 117);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #1f1f1f;
+  box-shadow: 1px 1px 12px #242424;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(-80deg);
+  -ms-transform: rotatey(-80deg);
+  transform: rotatey(-80deg);
+}
+
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+        
+.text{
+    font-size: 12px;
+}
+        .video-container {
+            width: 100%;
+            max-width: 450px;
+            margin: 20px auto;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+            border-radius: 10px;
+            transform: translateX(-16em);
+            margin-top: 40px;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        #muteButton {
+            position: absolute;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            transform: translateX(420px) translateY(-30px);
+        }
+        #muteButton:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            transform: translateX(420px) translateY(-30px);
+        }
+        #muteButton i {
+            font-size: 17px;
+            color: #333;
+            transition: all 0.3s ease;
+            transform: translateX(-4px);
+            
+        }
+        #muteButton:hover i {
+            color: #000;
+        }
+        #muteButton .fa-volume-up {
+            display: none;
+        }
+        #muteButton.muted .fa-volume-up {
+            display: inline-block;
+        }
+        #muteButton.muted .fa-volume-mute {
+            display: none;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            transform: translateX(-8em) translateY(-10em);
+        }
+        .image-container img {
+            width: 60%;
+            max-width: 250px;
+            border-radius: 10px;
+            border-color: ghostwhite;
+            box-shadow: 0 0 0 5px #ffffff80;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .arrow button {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .arrow button:hover {
+            color: #82ad96;
+        }
+        .arrow button svg {
+            width: 20px;
+            height: 20px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/logo1round2.png" alt="YUSUKE Logo">
+        </a>
+        <header>
+            <a href="index.html" class="logo2">
+                <img src="./static/wordlogo.png" alt="YUSUKE Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">General</a>
+                <a href="taekwondo.html">Taekwondo</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="music.html">Music</a>
+                <a href="ski.html">Ski</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="dancing.html">Dancing</a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="loader">
+        <p>Discover Dancing</p>
+        <div class="words">
+            <span class="word">Rhythm</span>
+            <span class="word">Expression</span>
+            <span class="word">Movement</span>
+            <span class="word">Passion</span>
+            <span class="word">Freedom</span>
+        </div>
+    </div>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="transform: translateX(13em); font-family: 'fonts';">Dancing: the art of moving to rhythm</h1>
+        <ul class="about-details">
+            <div class="video-container">
+                <div>
+                    <video id="myVideo" autoplay loop muted playsinline>
+                        <source src="./static/dancing.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <button id="muteButton">
+                        <i class="fas fa-volume-mute"></i>
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>    
+            </div>
+           
+               
+                    <div class="book">
+                        <p style="font-size: 14px; max-width: 340px; transform: translateX(15px);">Dancing is a powerful form of self-expression that combines physical movement with rhythm and music. It's a universal language that transcends cultural boundaries, allowing people to communicate emotions and stories through body movement. Dancing not only provides excellent exercise but also boosts mood, reduces stress, and enhances cognitive function. Whether it's ballet, hip-hop, salsa, or contemporary, each dance style offers a unique way to explore creativity and connect with others.</p>
+                    
+                        <div class="cover">
+                            <h2>The art of dancing</h2>
+                        
+                    </div>
+                    </div>
+                    
+                
+            
+            <div class="image-container">
+                <img style="transform: translateX(25em) translateY(-6em);" src="./static/dance.PNG" alt="Dancing">
+            </div>
+
+            <div style="transform: translateX(5em) translateY(-36em);" class="book">
+                <p style="font-size: 14px; max-width: 340px; transform: translateX(15px);">When I was in middle school, my dance coaches selected me to join a dance group, a moment that I didn’t fully appreciate at the time. Little did I know, this was the beginning of my dancing career. Since then, I have had the privilege of performing various styles, including <a href="glossary.html" style="font-size: 18px;" class="glossary-word">traditional Mongolian dance</a>, <a href="glossary.html" style="font-size: 18px;" class="glossary-word">Russian folk dance</a>, and even modern dance, each enriching my passion and skills in this beautiful art form.</p>
+            
+                <div  class="cover">
+                    <h2>Dancing journey</h2> 
+            </div>
+            </div>
+        
+        </ul>
+        
+        <div  style="margin-top: -30em;" class="button-container">
+            <a href="swimming.html" class="arrow">
+                <button aria-label="Back">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span>back</span>
+                </button>
+            </a>
+            <a href="index.html" class="arrow">
+                <button aria-label="Next">
+                    <span>home</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

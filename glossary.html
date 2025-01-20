@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary - YUSUKE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="./static/logo1round2.png">
+    <style>
+        .glossary-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .glossary-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .glossary-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        }
+        .glossary-item h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .glossary-item p {
+            font-size: 1em;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="./static/logo1round2.png" alt="YUSUKE Logo">
+        </a>
+        <header>
+            <a href="index.html" class="logo2">
+                <img src="./static/wordlogo.png" alt="YUSUKE Logo">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">General</a>
+                <a href="taekwondo.html">Taekwondo</a>
+                <a href="volleyball.html">Volleyball</a>
+                <a href="music.html">Music</a>
+                <a href="ski.html">Ski</a>
+                <a href="swimming.html">Swimming</a>
+                <a href="dancing.html">Dancing</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+        </header>
+    </nav>
+
+    <div class="loader">
+        <p>Discover Glossary</p>
+        <div class="words">
+            <span class="word">Terms</span>
+            <span class="word">Definitions</span>
+            <span class="word">Knowledge</span>
+            <span class="word">Learning</span>
+            <span class="word">Understanding</span>
+        </div>
+    </div>
+
+    <div class="cubic">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="Portfolio">
+        <h1 class="about-title" style="transform: translateX(18em); font-family: 'fonts';">Glossary of Terms</h1>
+        <div class="glossary-container">
+            <div class="glossary-item">
+                <h2><a href="taekwondo.html" style="color:#fff" class="glossary-word">Taekwondo</a></h2>
+                <p>A Korean martial art characterized by its emphasis on head-height kicks, jumping and spinning kicks, and fast kicking techniques.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="taekwondo.html" style="color:#fff" class="glossary-word">Korea open</a></h2>
+                <p>An international taekwondo competition held in Korea, featuring top athletes from around the world.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="volleyball.html" style="color:#fff" class="glossary-word">Volleyball</a></h2>
+                <p>A team sport in which two teams of six players are separated by a net, trying to score points by grounding a ball on the other team's court.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="music.html" style="color:#fff" class="glossary-word">Musician</a></h2>
+                <p>A person who creates, performs, or writes music, often specializing in a specific musical instrument or vocal style.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="ski.html" style="color:#fff" class="glossary-word">Ski and Snowboard</a></h2>
+                <p>Winter sports that involve gliding on snow. Skiing uses two separate skis, while snowboarding uses a single board attached to both feet.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="Swimming.html" style="color:#fff" class="glossary-word">Black Sea</a></h2>
+                <p>A body of water and marginal sea of the Atlantic Ocean between Eastern Europe and Western Asia.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="Swimming.html" style="color:#fff" class="glossary-word">Swimming</a></h2>
+                <p>A water-based sport that involves propelling the body through water using coordinated movement of the limbs and body.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="dancing.html" style="color:#fff" class="glossary-word">Mongolian Traditional Dance</a></h2>
+                <p>A form of cultural expression in Mongolia, often featuring colorful costumes and movements that mimic animals or tell stories from Mongolian history and folklore.</p>
+            </div>
+            <div class="glossary-item">
+                <h2><a href="dancing.html" style="color:#fff" class="glossary-word">Russian Folk Dance</a></h2>
+                <p>Russian folk dance embodies the country's rich cultural heritage, showcasing vibrant movements, traditional music, and colorful costumes that celebrate community and history.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="triangles">
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+        <div class="tri"></div>
+        <div class="tri invert"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
