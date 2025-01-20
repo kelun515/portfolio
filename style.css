@@ -1,6 +1,6 @@
 @font-face {
   font-family: "fonts"; /* Font family name */
-  src: url("/fonts/rocketpop.otf") format("woff2"), /* Add more font formats as needed */ url("/fonts/rocketpop3d.otf")
+  src: url("./fonts/rocketpop.otf") format("woff2"), /* Add more font formats as needed */ url("./fonts/rocketpop3d.otf")
     format("woff2");
   font-weight: normal; /* Font weight (normal, bold, etc.) */
   font-style: normal; /* Font style (normal, italic) */
